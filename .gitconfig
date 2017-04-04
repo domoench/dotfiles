@@ -1,0 +1,9 @@
+[user]
+    name = David Moench
+    email = domoench@gmail.com
+[push]
+    default = simple
+[color]
+    branch = auto
+    diff = auto
+    status = auto
