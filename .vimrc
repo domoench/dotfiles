@@ -11,7 +11,7 @@ set ai " auto indent
 set nowrap
 
 " COLORS
-colorscheme twilight
+colorscheme elflord
 
 " SAVE + RESTORE FOLDS
 autocmd BufWinLeave *.* mkview
