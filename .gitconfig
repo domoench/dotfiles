@@ -2,16 +2,10 @@
     name = David Moench
     email = domoench@gmail.com
     
-[color "diff"]
-    meta = yellow
-    frag = magenta
-    old = red
-    new = green
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = red
-[color "branch"]
-    current = green
-    local = white
-    remote = red
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
