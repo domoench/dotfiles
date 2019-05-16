@@ -39,8 +39,7 @@ brew install openssh
 brew install git
 brew install tmux
 brew install ccat
-brew install vim
-brew install neovim
+brew install tree
 
 # -------------------------------
 # Casks
