@@ -42,7 +42,12 @@ Plug 'scrooloose/nerdtree'
 " ALE: https://github.com/w0rp/ale
 Plug 'w0rp/ale'
 
+" Theme
 Plug 'arcticicestudio/nord-vim'
+
+" Git plugins
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

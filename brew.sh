@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# https://github.com/lucasfcosta/dotfiles 
+# https://github.com/lucasfcosta/dotfiles
 
 echo "Installing brew formulae..."
 
@@ -41,6 +41,8 @@ brew install tmux
 brew install ccat
 brew install tree
 brew install ncdu
+brew install htop
+brew install darksky-weather
 
 # -------------------------------
 # Casks
