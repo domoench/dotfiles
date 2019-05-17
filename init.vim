@@ -42,6 +42,8 @@ Plug 'scrooloose/nerdtree'
 " ALE: https://github.com/w0rp/ale
 Plug 'w0rp/ale'
 
+Plug 'arcticicestudio/nord-vim'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -60,6 +62,8 @@ let g:NERDTreeQuitOnOpen=1
 if (executable('ag'))
   let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
+
+colorscheme nord
 
 " Bind FZF to Ctrl-P
 nnoremap <C-P> :Files<CR>

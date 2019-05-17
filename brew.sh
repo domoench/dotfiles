@@ -40,6 +40,7 @@ brew install git
 brew install tmux
 brew install ccat
 brew install tree
+brew install ncdu
 
 # -------------------------------
 # Casks
