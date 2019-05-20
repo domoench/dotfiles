@@ -43,6 +43,7 @@ brew install tree
 brew install ncdu
 brew install htop
 brew install darksky-weather
+brew install ctags
 
 # -------------------------------
 # Casks
