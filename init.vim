@@ -10,6 +10,9 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
+" Turn off search highlighting
+set nohlsearch
+
 " Spaces instead of tabs
 set expandtab
 
@@ -23,6 +26,17 @@ set si
 
 " Delete trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LEADER KEY SETUP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = ","
+
+" Select among multiple tag matches
+nnoremap <leader>t :ts<cr>
+
+" Open nerdtree to the current file's directory
+nnoremap <leader>n :NERDTreeFind<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN INSTALLS
@@ -45,9 +59,15 @@ Plug 'w0rp/ale'
 " Theme
 Plug 'arcticicestudio/nord-vim'
 
-" Git plugins
+" Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+
+" Typescript
+Plug 'leafgarland/typescript-vim'
+
+" Javascript formatting
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
