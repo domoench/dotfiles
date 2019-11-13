@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 set nu
 set ruler
 set nowrap
@@ -46,15 +45,18 @@ nnoremap <leader>n :NERDTreeFind<cr>
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 
-" FZF: https://github.com/junegunn/fzf.vim
+" FZF: Fuzzy file search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" NERDTree: https://github.com/scrooloose/nerdtree
+" NERDTree: Directory navigation
 Plug 'scrooloose/nerdtree'
 
-" ALE: https://github.com/w0rp/ale
+" ALE: Linter hints
 Plug 'w0rp/ale'
+
+" Markdown Preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Theme
 Plug 'arcticicestudio/nord-vim'

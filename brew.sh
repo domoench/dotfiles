@@ -44,6 +44,7 @@ brew install ncdu
 brew install htop
 brew install darksky-weather
 brew install ctags
+brew install yarn
 
 # -------------------------------
 # Casks
