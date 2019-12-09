@@ -50,14 +50,20 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" NERDTree: https://github.com/scrooloose/nerdtree
+" NERDTree
 Plug 'scrooloose/nerdtree'
 
-" ALE: https://github.com/w0rp/ale
-Plug 'w0rp/ale'
+" Commenting/Uncommenting
+Plug 'scrooloose/nerdcommenter'
+
+" ALE
+Plug 'dense-analysis/ale'
 
 " Theme
 Plug 'arcticicestudio/nord-vim'
+
+" Ruby
+Plug 'tpope/vim-rails'
 
 " Git
 Plug 'tpope/vim-fugitive'
