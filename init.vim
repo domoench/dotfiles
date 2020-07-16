@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 set nu
 set ruler
 set nowrap
@@ -41,7 +40,6 @@ nnoremap <leader>n :NERDTreeFind<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN INSTALLS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Vim Plug: https://github.com/junegunn/vim-plug
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -53,27 +51,41 @@ Plug 'junegunn/fzf.vim'
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
+" Vim Tab labeling
+Plug 'webdevel/tabulous'
+
 " Commenting/Uncommenting
 Plug 'scrooloose/nerdcommenter'
 
 " ALE
 Plug 'dense-analysis/ale'
 
-" Theme
+" Themes
 Plug 'arcticicestudio/nord-vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
-" Ruby
+" Rails
 Plug 'tpope/vim-rails'
 
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
+" ctags
+Plug 'ludovicchabant/vim-gutentags'
+
 " Typescript
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'Quramy/tsuquyomi'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " Javascript formatting
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+" Markdown previewing
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -81,7 +93,6 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN CONFIG
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " NERDTree on ctrl+n
 let NERDTreeShowHidden=1
 map <silent> <C-n> :NERDTreeToggle<CR>
@@ -94,7 +105,20 @@ if (executable('ag'))
   let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
 
-colorscheme nord
+" Colorscheme
+set termguicolors
+set background=light
+colorscheme gruvbox
+" colorscheme nord
+" colorscheme PaperColor
 
 " Bind FZF to Ctrl-P
 nnoremap <C-P> :Files<CR>
+
+let g:NERDSpaceDelims = 1
+
+" Gutentags Tags config
+let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "public", "tmp", "frontend", "coverage", "isomorphic-server"]
+let g:gutentags_ctags_executable_ruby = 'ripper-tags'
+let g:gutentags_ctags_extra_args = ['--ignore-unsupported-options', '--recursive']
+let g:gutentags_define_advanced_commands = 1
