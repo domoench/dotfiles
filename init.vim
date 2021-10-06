@@ -74,7 +74,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
 
 " Rails
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -94,6 +94,9 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Markdown previewing
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+" Latex previewing
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -116,8 +119,8 @@ endif
 " Colorscheme
 set termguicolors
 set background=light
-colorscheme gruvbox
-" colorscheme nord
+" colorscheme gruvbox
+colorscheme nord
 " colorscheme PaperColor
 
 " Bind FZF to Ctrl-P
@@ -130,3 +133,7 @@ let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", "vendor", ".g
 let g:gutentags_ctags_executable_ruby = 'ripper-tags'
 let g:gutentags_ctags_extra_args = ['--ignore-unsupported-options', '--recursive']
 let g:gutentags_define_advanced_commands = 1
+
+" Latex preview config
+autocmd Filetype tex setl updatetime=1
+let g:livepreview_previewer = 'open -a Preview'
