@@ -73,7 +73,7 @@ cp .zshrc ~/.zshrc
 # -------------------------------
 
 # Dev utilities
-brew install --cask docker
+# brew install --cask docker
 
 # Browsers
 brew install --cask firefox
