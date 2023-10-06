@@ -26,6 +26,7 @@ brew install ag
 # Please see https://github.com/neovim/neovim/issues/1315
 brew install python3
 pip3 install --user --upgrade neovim
+brew install pyenv # TODO can you do the above 2 lines with pyenv?
 
 brew install wget
 brew install curl
@@ -42,7 +43,6 @@ brew install ccat
 brew install tree
 brew install ncdu
 brew install htop
-brew install darksky-weather
 brew install ctags
 brew install yarn
 brew install zsh
