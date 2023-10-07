@@ -62,11 +62,12 @@ sh -c 'curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 mkdir -p ~/.config/nvim
 cp init.vim ~/.config/nvim/init.vim
 cp .zshrc ~/.zshrc
+cp .tmux.conf ~/.tmux.conf
 
 # TODO Automate getting tmux Nord theme working
 # 1. Install powerline fonts: https://github.com/powerline/fonts
 # 2. Install Nord terminal theme: https://github.com/arcticicestudio/nord-terminal-app
-# 3. Switch the Nord profile's font to a powerline font:
+# 3. Switch the Nord profile's font to a powerline font
 
 # -------------------------------
 # Casks
