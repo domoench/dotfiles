@@ -133,9 +133,10 @@ let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", "vendor", ".g
 let g:gutentags_ctags_executable_ruby = 'ripper-tags'
 let g:gutentags_ctags_extra_args = ['--recurse']
 let g:gutentags_define_advanced_commands = 1
-# let g:gutentags_trace = 1 # Uncomment for trace output in vim :messages
 let s:vim_tags = expand('~/.cache/tags')
 let g:gutentags_cache_dir = s:vim_tags
+" Uncomment following line for trace output in vim :messages
+" let g:gutentags_trace = 1
 
 " Latex preview config
 autocmd Filetype tex setl updatetime=1
