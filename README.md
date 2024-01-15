@@ -20,3 +20,7 @@ To get the Terminal app's nord color theme working, follow [these install steps]
 To [get the tmux plugins (like powerline status bar) working](https://github.com/tmux-plugins/tpm#installing-plugins):
 - Open a tmux session
 - Press `prefix` + `I`. This will install plugins specified in `.tmux.conf`
+
+To enable ALE linting of python code in vim:
+- Ensure flake8 is available in the context of the project: Either install in the local
+python project virtual env, or in the global pyenv-managed python's packages.

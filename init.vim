@@ -141,3 +141,9 @@ let g:gutentags_cache_dir = s:vim_tags
 " Latex preview config
 autocmd Filetype tex setl updatetime=1
 let g:livepreview_previewer = 'open -a Preview'
+
+" ALE config
+let g:ale_linters = {
+\  'python': ['flake8']
+\}
+let g:ale_virtualtext_cursor = 0
