@@ -93,7 +93,7 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Markdown previewing
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
 " Latex previewing
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
@@ -147,3 +147,9 @@ let g:ale_linters = {
 \  'python': ['flake8']
 \}
 let g:ale_virtualtext_cursor = 0
+let g:ale_lint_on_text_changed = 'always'
+let g:ale_lint_on_insert_leave = 1
+
+" Markdown Preview config
+let g:mkdp_browser = 'firefox'
+let g:mkdp_echo_preview_url = 1
