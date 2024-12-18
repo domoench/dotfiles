@@ -73,6 +73,9 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
 
+" Lightline: Vim status bar
+Plug 'itchyny/lightline.vim'
+
 " Rails
 " Plug 'tpope/vim-rails'
 
@@ -98,6 +101,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' 
 " Latex previewing
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
+" TODO: Keep an eye on https://github.com/nvim-treesitter/nvim-treesitter
+" for advanced syntax highlighting features
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -119,8 +125,9 @@ endif
 " Colorscheme
 set termguicolors
 set background=light
-" colorscheme gruvbox
+syntax on
 colorscheme nord
+" colorscheme gruvbox
 " colorscheme PaperColor
 
 " Bind FZF to Ctrl-P
@@ -144,11 +151,14 @@ let g:livepreview_previewer = 'open -a Preview'
 
 " ALE config
 let g:ale_linters = {
-\  'python': ['flake8']
+\  'python': ['flake8', 'jedi_language_server']
 \}
 let g:ale_virtualtext_cursor = 0
 let g:ale_lint_on_text_changed = 'always'
 let g:ale_lint_on_insert_leave = 1
+let g:ale_completion_enabled=1
+nmap K :ALEHover<CR>
+nmap gd :ALEGoToDefinition<CR>
 
 " Markdown Preview config
 let g:mkdp_browser = 'firefox'
