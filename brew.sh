@@ -46,6 +46,7 @@ brew install htop
 brew install ctags
 brew install yarn
 brew install zsh
+brew install ydiff
 
 # Extend zsh to oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
